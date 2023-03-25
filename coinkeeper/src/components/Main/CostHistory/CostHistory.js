@@ -1,6 +1,7 @@
+import chm from "./CostHistory.module.css";
 function CostHistory() {
   return (
-    <div className="main">
+    <div className={chm.body}>
       <h>667</h>
     </div>
   );

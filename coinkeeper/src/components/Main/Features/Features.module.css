@@ -1,8 +1,17 @@
 .body{
-    width: 500px;
+    margin: 60px;
+    width: 700px;
     height: 200px;
     background-color: aqua;
 }
 .income{
     background-color: aquamarine;
+}
+.accounts{
+    background-color: blueviolet;
+    margin-top: 20px;
+}
+.expenses{
+    background-color: brown;
+    margin-top: 20px;
 }
