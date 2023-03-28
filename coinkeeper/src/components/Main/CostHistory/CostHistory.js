@@ -1,10 +1,11 @@
-import chm from "./CostHistory.module.css";
+import cs from "./CostHistory.module.css";
+
 function CostHistory() {
-  return (
-    <div className={chm.body}>
-      <h>667</h>
-    </div>
-  );
+    return (
+        <div className={cs.CostHistory}>
+
+        </div>
+    );
 }
 
 export default CostHistory;
