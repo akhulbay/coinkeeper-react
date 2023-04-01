@@ -28,6 +28,9 @@
     align-items: center;
     justify-content: space-between;
     margin-right: 60px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid transparent;
 }
 .accounticon {
     width: 30px;
