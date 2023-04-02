@@ -1,10 +1,11 @@
 import ac from "./Account.module.css";
+import Header from "../Header/Header";
 
 function Account() {
     return (
-        <div className={ac.account}>
-
-            <div className={ac.settings}>
+        <div>
+            <Header/>
+            <div className={ac.account}>
 
             </div>
         </div>

@@ -1,0 +1,68 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.form{
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+.block{
+    position: relative;
+    margin-bottom: 25px;
+}
+.block > h3 {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+.sign_label{
+    font-size: 20px;
+    position: absolute;
+    left: 15px;
+    background-color: #fff;
+    top: -25px;
+}
+.input{
+    border-radius: 10px;
+    width: 350px;
+    height: 35px;
+    padding-left: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.loginbtn{
+    background-color: #05d398;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: white;
+    margin-bottom: 15px;
+    font-size: 20px;
+    width: 366px;
+    cursor: pointer;
+}
+
+.subtext{
+    font-size: 18px;
+    text-align: center;
+}
+.link{
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    text-decoration: inherit;
+}
+
