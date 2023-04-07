@@ -37,7 +37,7 @@ function Features({
         {accounts.map((accounts) => (
           <div className={fm.incomeItem}>
             <div>{accounts.title}</div>
-            <Link to="/moneyAccount">
+            <Link to="moneyAccount">
               <div
                 className={fm.icons}
                 style={{ backgroundColor: accounts.color }}

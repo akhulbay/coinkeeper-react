@@ -4,7 +4,7 @@ function Header() {
     return (
         <div className={hm.header}>
             <div className={hm.logo}>
-                <img src="logo.png" alt=""/>
+                <img src="https://ru.odvme.com/uploads/posts/2021-11/coin-keeper.webp" alt=""/>
                 <h4>CoinKeeper</h4>
             </div>
 

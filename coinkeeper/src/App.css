@@ -3,9 +3,14 @@
 
 }
 
-.container {
+.wrapper{
   background-size: 100% ;
   background-color: #e6e9ec;
+  height: 1000px;
+}
+
+.container {
+
 }
 
 .App-logo {

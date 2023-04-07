@@ -3,12 +3,13 @@
 }
 
 .container {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .incomeOutcomeVisual {
     width: 440px;
-    margin-left: 34%;
+    margin-left: 32%;
     padding: 20px;
     margin-top: 20px;
     display: flex;
@@ -70,7 +71,7 @@
 .incomeOutcomeAdding {
     display: flex;
     width: 850px;
-    margin-left: 160px;
+    margin-left: 20%;
     margin-top: 20px;
     border-radius: 10px;
     justify-content: space-between;

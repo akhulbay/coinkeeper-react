@@ -8,7 +8,9 @@ export const CategoryOutcomeAdding = ({
                                         expensesList,
                                         setExpensesList,
                                         expenseId,
-                                        accounts
+                                        accounts,
+                                        incomeExpenseList,
+                                        setIncomeExpenseList
                                     }) => {
 
     const [hideHiddenAccountDiv, setHideHiddenAccountDiv] = useState(true);
@@ -40,10 +42,50 @@ export const CategoryOutcomeAdding = ({
                 }]
             );
 
+            incomeExpenseList.map((item) => {
+                if (item.id === expenseDate) {
+                    setIncomeExpenseList((incomeExpenseList) => {
+                        const myExpense = incomeExpenseList.find(i => i.id === expenseDate)
+                        return [
+                            ...incomeExpenseList.filter(i => i.id !== expenseDate), {
+                            ...myExpense,
+                                data: [...myExpense.data, {
+                                    transactionId: uuid(),
+                                    sum: expenseSum,
+                                    status: false, // true for income and false for expense
+                                    account: expenseFromIncome,
+                                    category: expenseCategory, //this field is only for expanse
+                                    income: null
+                                }]
+                            }
+                        ]
+                        }
+
+
+                    )
+                } else {
+                    setIncomeExpenseList(
+                        [...incomeExpenseList, {
+                            id: expenseDate,
+                            data: [{
+                                transactionId: uuid(),
+                                sum: expenseSum,
+                                status: false, // true for income and false for expense
+                                account: expenseFromIncome,
+                                category: expenseCategory, //this field is only for expanse
+                                income: null
+                            },]
+                        }]
+                    );
+                }
+            })
+
+            console.log(incomeExpenseList)
             setExpenseSum("");
             setExpenseDate("");
             setExpenseFromIncome(null)
         }
+
     }
     return (
         <div className={cs.incomeOutcomeAdding}>

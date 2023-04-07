@@ -6,6 +6,7 @@ import ExpensesList from "./ExpensesList";
 import uuid from "react-uuid";
 import {IncomeOutcomeVisual} from "./IncomeOutcomeVisual";
 import {IncomeOutcomeAdding} from "./IncomeOutcomeAdding";
+import Header from "../Header/Header";
 
 
 function MoneyAccount({
@@ -16,7 +17,9 @@ function MoneyAccount({
                           expensesList,
                           setExpensesList,
                           accountId,
-                          accounts
+                          accounts,
+                          incomeExpenseList,
+                          setIncomeExpenseList
                       }) {
     const [outcomePercentage, setOutcomePercentage] = useState(100);
     const [incomePercentage, setIncomePercentage] = useState(50);
@@ -28,13 +31,15 @@ function MoneyAccount({
 
     return (
         <div className={ms.MoneyAccount}>
+            <Header/>
             <div className={ms.container}>
-
                 <IncomeOutcomeVisual incomePercentage={incomePercentage} outcomePercentage={outcomePercentage}
                                      needToEarnSum={needToEarnSum} canSpendSum={canSpendSum}/>
                 <IncomeOutcomeAdding income={income} expenses={expenses} incomeList={incomeList}
                                      setIncomeList={setIncomeList} expensesList={expensesList}
-                                     setExpensesList={setExpensesList} accountId={accountId} accounts={accounts}/>
+                                     setExpensesList={setExpensesList} accountId={accountId} accounts={accounts}
+                                     incomeExpenseList={incomeExpenseList}
+                                     setIncomeExpenseList={setIncomeExpenseList}/>
             </div>
         </div>
     );
