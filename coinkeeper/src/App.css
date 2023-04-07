@@ -4,8 +4,8 @@
 }
 
 .container {
+  background-size: 100% ;
   background-color: #e6e9ec;
-  height: 100vh;
 }
 
 .App-logo {
