@@ -8,7 +8,7 @@ function Features({
   accounts,
   setAccounts,
   expenses,
-  setExpenses,
+  setExpense,
 }) {
   return (
     <div className={fm.body}>
@@ -63,9 +63,11 @@ function Features({
         {expenses.map((expenses) => (
           <div className={fm.incomeItem}>
             <div>{expenses.title}</div>
-            <div className={fm.icons} style={{ background: expenses.fill }}>
-              <img src={expenses.icon} className={fm.iconStyle} />
-            </div>
+            <Link to="categoryAccount">
+              <div className={fm.icons} style={{ background: expenses.fill }}>
+                <img src={expenses.icon} className={fm.iconStyle} />
+              </div>
+            </Link>
             <div style={{ color: expenses.color }}>{expenses.totalSum}</div>
             <div>{expenses.maxSum}</div>
           </div>
