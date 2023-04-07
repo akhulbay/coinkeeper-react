@@ -1,0 +1,124 @@
+.reportBlock {
+    border: 1px solid red;
+    width: 300px;
+}
+
+.reportTitle {
+    font-size: 22px;
+}
+
+.reportContent {
+    background: lightgrey;
+}
+
+.reportList {
+    padding: 15px;
+    display: flex;
+
+}
+
+.reportName {
+    padding-left: 15px;
+}
+
+.accountName {
+    font-size: 13px;
+    font-weight: bold;
+    color: #8e8e8c;
+}
+
+.categoryName {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.reportNumbers {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.moneySum {
+    margin-top: 15%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.moneyContent {
+    padding: 5px 15px;
+    display: flex;
+}
+
+.accountBalance {
+    padding-left: 15px;
+}
+
+.accountBalanceText {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.balanceText {
+    margin-left: 58%;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8e8e8c;
+}
+
+.dailyResult {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.dailyResultText {
+    color: #2fb58c;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.resultText {
+    margin-left: 70%;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8e8e8c;
+}
+
+.incomeOutcomeRecord {
+    background-color: #dddddd;
+    border-radius: 10px;
+    margin: 5px 10px;
+    padding: 5px 20px;
+    width: 288px;
+}
+
+.incomeOutcomeRecordContent {
+    display: flex;
+}
+
+.incomeTitle {
+    font-weight: 600;
+    font-size: 14px;
+    color: #8e8e8c;
+}
+
+.accountTitle {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.incomeRecordSum {
+    margin-top: 7px;
+    margin-right: 0;
+    margin-left: auto;
+    font-size: 17px;
+    font-weight: 600;
+    color: #05d398;
+}
+
+.expenseRecordSum {
+    margin-top: 7px;
+    margin-right: 0;
+    margin-left: auto;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fc392f;
+}

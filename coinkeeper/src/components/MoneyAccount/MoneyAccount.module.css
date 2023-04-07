@@ -1,0 +1,303 @@
+.MoneyAccount {
+
+}
+
+.container {
+
+}
+
+.incomeOutcomeVisual {
+    width: 440px;
+    margin-left: 34%;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.incomeBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.needToEarn {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.changeButton > button {
+    cursor: pointer;
+    margin: 0 20px;
+    border: 0;
+    background-color: #3092fd;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.changeButton > button:hover {
+    background-color: #1d61ab;
+    color: #e6e9ec;
+}
+
+.outcomeBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.canSpend {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.title {
+    margin-bottom: 5px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.incomeOutcomeAdding {
+    display: flex;
+    width: 850px;
+    margin-left: 160px;
+    margin-top: 20px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.incomeAdding {
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.incomeContent {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.addIncome {
+    padding: 7px;
+    width: 250px;
+    margin-left: 12%;
+    margin-bottom: 15px;
+    margin-top: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: nowrap;
+    background-color: #c2bdbd;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.sumAndButton {
+    margin-bottom: 5px;
+    display: flex;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+.date {
+    display: flex;
+    justify-content: center;
+}
+
+
+#sum {
+    width: 150px;
+    padding-left: 15px;
+    font-size: 15px;
+    height: 20px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+}
+
+#date {
+
+    width: 110px;
+    padding-left: 5px;
+    font-size: 15px;
+    height: 20px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+}
+
+.addButton {
+    cursor: pointer;
+    margin-left: 10px;
+    background-color: #fdca01;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+
+.addButton:hover {
+    background-color: #9f7f01;
+}
+
+.hiddenIncomes {
+    z-index: 1;
+    position: absolute;
+    background-color: #b7b7b7;
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-left: 50px;
+    width: 80px;
+    font-size: 15px;
+}
+
+.hiddenIncomes > ul {
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.hiddenIncomes > ul >li {
+    margin-top: 3px;
+    list-style-type: none;
+}
+
+.hiddenIncomes > ul >li >svg {
+    margin-right: 5px;
+}
+
+.incomeBlock > hr {
+    margin: 0 10px;
+    outline: none;
+}
+
+.hide-div {
+    display: none;
+}
+
+.addIncomeOptions {
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: #05d398;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.addIncomeOptions:hover {
+    background-color: #03986d;
+}
+
+.addIncomeOptions > span {
+    padding: 7px;
+    font-size: 14px;
+}
+
+.incomeOutcomeTitle {
+    padding-top: 5px;
+    margin-left: 30%;
+    margin-bottom: 5px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.outcomeAdding {
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+.addExpensesOptions {
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: #fc392f;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.addExpensesOptions:hover {
+    background-color: #be180f;
+}
+
+.addExpensesOptions > span {
+    padding: 7px;
+    font-size: 14px;
+}
+
+.incomeOutcomeList {
+    height: 270px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+.incomeOutcomeRecord {
+    background-color: #dddddd;
+    border-radius: 10px;
+    margin: 5px 10px;
+    padding: 5px 20px;
+    width: 288px;
+}
+
+.incomeOutcomeRecordContent {
+    display: flex;
+}
+
+.incomeTitle {
+    font-weight: 600;
+    font-size: 14px;
+    color: #8e8e8c;
+}
+
+.accountTitle {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.incomeRecordSum {
+    margin-top: 7px;
+    margin-right: 0;
+    margin-left: auto;
+    font-size: 17px;
+    font-weight: 600;
+    color: #05d398;
+}
+
+.expenseRecordSum {
+    margin-top: 7px;
+    margin-right: 0;
+    margin-left: auto;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fc392f;
+}

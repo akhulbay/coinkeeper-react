@@ -1,20 +1,21 @@
 import "./App.css";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
-import { useEffect, useState } from "react";
-import {BrowserRouter,Route,Routes } from "react-router-dom";
+import {useEffect, useState} from "react";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Account from "./components/Account/Account";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import storage from "./components/Icons/component";
 import icod from "./components/Icons/building.svg";
+
 function App() {
     const [isAuth, setIsAuth] = useState(false)
     const loginIn = JSON.parse(localStorage.getItem("loginIn"))
-    if(!loginIn)localStorage.setItem(
+    if (!loginIn) localStorage.setItem(
         "loginIn",
         JSON.stringify({
-            users: [{ login: "ainur", password: "qwerty", isAuth: false }],
+            users: [{login: "ainur", password: "qwerty", isAuth: false}],
         })
     );
     useEffect(() => {
@@ -145,30 +146,70 @@ function App() {
         localStorage.setItem("expenses", JSON.stringify(expenses));
     }, [expenses]);
 
+    const [expensesList, setExpensesList] = useState(
+        JSON.parse(localStorage.getItem("expensesList")) || [
+            {
+                id: 1,
+                date: "2023-03-06",
+                sum: "30000",
+                account: accounts.at(0),
+                category: expenses.at(0)
+            },
+        ]
+    );
+
+    useEffect(() => {
+        localStorage.setItem("expensesList", JSON.stringify(expensesList))
+    }, [expensesList]);
+
+    const [incomeList, setIncomeList] = useState(
+        JSON.parse(localStorage.getItem("incomeList")) || [
+            {
+                id: 1,
+                date: "2023-03-06",
+                sum: "30000",
+                account: accounts.at(0),
+                income: income.at(0)
+            },
+        ]
+    );
+
+    useEffect(() => {
+        localStorage.setItem("incomeList", JSON.stringify(incomeList))
+    }, [incomeList]);
+
+
+
 
     return (
-      <BrowserRouter>
-          <div>
-              <Routes>
-                  <Route path={"/"}
-                         element={<Login setIsAuth={setIsAuth} />}/>
-                  <Route path={"/register"}
-                         element={<Register/>}/>
-                  <Route
-                      path={"/main"}
-                      element={
-                      <Main  income={income}
-                             setIncome={setIncome}
-                             accounts={accounts}
-                             setAccounts={setAccounts}
-                             expenses={expenses}
-                             setExpense={setExpenses} />} />
-                  <Route
-                      path={"/account"}
-                      element={<Account/>} />
-              </Routes>
-          </div>
-      </BrowserRouter>
-  );
+        <BrowserRouter>
+            <div className="container">
+                <Routes>
+                    <Route path={"/"}
+                           element={<Login setIsAuth={setIsAuth}/>}/>
+                    <Route path={"/register"}
+                           element={<Register/>}/>
+                    <Route
+                        path={"/main"}
+                        element={
+                            <Main income={income}
+                                  setIncome={setIncome}
+                                  accounts={accounts}
+                                  setAccounts={setAccounts}
+                                  expenses={expenses}
+                                  setExpense={setExpenses}
+                                  incomeList={incomeList}
+                                  setIncomeList={setIncomeList}
+                                  expensesList={expensesList}
+                                  setExpensesList={setExpensesList}
+                            />}/>
+                    <Route
+                        path={"/account"}
+                        element={<Account/>}/>
+                </Routes>
+            </div>
+        </BrowserRouter>
+    );
 }
+
 export default App;
