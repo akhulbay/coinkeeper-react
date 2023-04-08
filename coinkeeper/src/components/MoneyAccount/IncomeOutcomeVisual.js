@@ -1,14 +1,20 @@
 // @flow
 import * as React from "react";
 import ms from "./MoneyAccount.module.css";
+import { useState } from "react";
 import CircleProgressBar from "../CircleProgressBar/CircleProgressBar";
+import ModalInput from "../Modal/ModalInput";
 
 export const IncomeOutcomeVisual = ({
   incomePercentage,
   outcomePercentage,
   needToEarnSum,
+  setneedToEarnSum,
   canSpendSum,
+  setCanSpendSum,
 }) => {
+  const [modalActive, setModalActive] = useState(false);
+
   return (
     <div className={ms.incomeOutcomeVisual}>
       <div className={ms.incomeBlock}>
@@ -17,9 +23,14 @@ export const IncomeOutcomeVisual = ({
         <div className={ms.needToEarn}>{needToEarnSum} тг</div>
       </div>
       <div className={ms.changeButton}>
-        <button>Изменить</button>
+        <button onClick={() => setModalActive(!modalActive)}>Изменить</button>
       </div>
-      {/* <ModalInput /> */}
+      <ModalInput
+        active={modalActive}
+        setActive={setModalActive}
+        setneedToEarnSum={setneedToEarnSum}
+        setCanSpendSum={setCanSpendSum}
+      />
       <div className={ms.outcomeBlock}>
         <span className={ms.title}>Расходы</span>
         <CircleProgressBar percentage={incomePercentage} />
