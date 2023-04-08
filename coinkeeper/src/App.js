@@ -7,7 +7,6 @@ import Account from "./components/Account/Account";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import storage from "./components/Icons/component";
-import icod from "./components/Icons/building.svg";
 import MoneyAccount from "./components/MoneyAccount/MoneyAccount";
 import CategoryAccount from "./components/CategoryAccount/CategoryAccount";
 
