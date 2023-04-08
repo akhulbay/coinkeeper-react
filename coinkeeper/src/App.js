@@ -286,7 +286,7 @@ function App() {
         localStorage.setItem("incomeExpenseList", JSON.stringify(incomeExpenseList));
     }, [incomeExpenseList]);
 
-    const [currentAccount, setCurrentAccount] = useState(null);
+    const [currentAccount, setCurrentAccount] = useState(0);
     const [currentExpense, setCurrentExpense] = useState(null);
 
 
