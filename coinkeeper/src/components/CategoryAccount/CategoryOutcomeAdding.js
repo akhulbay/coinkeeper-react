@@ -1,17 +1,19 @@
 import cs from "./CategoryAccount.module.css";
-import {useState} from "react";
+import React, {useState} from "react";
 import uuid from "react-uuid";
 import AccountList from "./AccountList";
 
+
 export const CategoryOutcomeAdding = ({
-                                        expenses,
-                                        expensesList,
-                                        setExpensesList,
-                                        expenseId,
-                                        accounts,
-                                        incomeExpenseList,
-                                        setIncomeExpenseList
-                                    }) => {
+                                          expenses,
+                                          expensesList,
+                                          setExpensesList,
+                                          expenseId,
+                                          accounts,
+                                          incomeExpenseList,
+                                          setIncomeExpenseList,
+                                          currentExpense
+                                      }) => {
 
     const [hideHiddenAccountDiv, setHideHiddenAccountDiv] = useState(true);
 
@@ -19,15 +21,11 @@ export const CategoryOutcomeAdding = ({
     const [expenseSum, setExpenseSum] = useState(null);
     const [expenseFromIncome, setExpenseFromIncome] = useState(null);
     const [expenseCategory, setExpenseCategory] = useState(null);
+    const [newExpenseList, setNewExpenseList] = useState(null);
 
     const setAccount = () => {
-        expenses.filter((expense) => {
-            if (expense.id === expenseId) {
-                setExpenseCategory(expense);
-            }
-        })
+        setExpenseCategory(currentExpense)
     }
-
 
     const saveExpense = () => {
         if (expenseDate !== "" && expenseSum !== "" && expenseFromIncome !== null) {
@@ -38,30 +36,28 @@ export const CategoryOutcomeAdding = ({
                     date: expenseDate,
                     sum: expenseSum,
                     account: expenseFromIncome,
-                    category: expenseCategory
+                    category: currentExpense
                 }]
             );
 
             incomeExpenseList.map((item) => {
                 if (item.id === expenseDate) {
                     setIncomeExpenseList((incomeExpenseList) => {
-                        const myExpense = incomeExpenseList.find(i => i.id === expenseDate)
-                        return [
-                            ...incomeExpenseList.filter(i => i.id !== expenseDate), {
-                            ...myExpense,
-                                data: [...myExpense.data, {
-                                    transactionId: uuid(),
-                                    sum: expenseSum,
-                                    status: false, // true for income and false for expense
-                                    account: expenseFromIncome,
-                                    category: expenseCategory, //this field is only for expanse
-                                    income: null
-                                }]
-                            }
-                        ]
+                            const myExpense = incomeExpenseList.find(i => i.id === expenseDate)
+                            return [
+                                ...incomeExpenseList.filter(i => i.id !== expenseDate), {
+                                    ...myExpense,
+                                    data: [...myExpense.data, {
+                                        transactionId: uuid(),
+                                        sum: expenseSum,
+                                        status: false, // true for income and false for expense
+                                        account: expenseFromIncome,
+                                        category: currentExpense, //this field is only for expanse
+                                        income: null
+                                    }]
+                                }
+                            ]
                         }
-
-
                     )
                 } else {
                     setIncomeExpenseList(
@@ -72,7 +68,7 @@ export const CategoryOutcomeAdding = ({
                                 sum: expenseSum,
                                 status: false, // true for income and false for expense
                                 account: expenseFromIncome,
-                                category: expenseCategory, //this field is only for expanse
+                                category: currentExpense, //this field is only for expanse
                                 income: null
                             },]
                         }]
@@ -87,6 +83,18 @@ export const CategoryOutcomeAdding = ({
         }
 
     }
+
+    const convertToExpenseList = () => {
+        incomeExpenseList.map((item) => {
+            item.data.filter((i) => {
+                if (i.category === currentExpense && i.status === false) {
+                    return true
+                }
+            })
+        })
+    }
+
+
     return (
         <div className={cs.incomeOutcomeAdding}>
             <div className={cs.outcomeAdding}>
@@ -95,6 +103,7 @@ export const CategoryOutcomeAdding = ({
                     <div className={cs.incomeOutcomeList}>
                         {
                             expensesList.map((item) => (
+                                item.category === currentExpense ?
                                     <div className={cs.incomeOutcomeRecord}>
                                         <div className={cs.incomeOutcomeRecordDate}>
                                             <span>{item.date}</span>
@@ -120,6 +129,8 @@ export const CategoryOutcomeAdding = ({
                                             </div>
                                         </div>
                                     </div>
+                                    :
+                                    null
                                 )
                             )
 

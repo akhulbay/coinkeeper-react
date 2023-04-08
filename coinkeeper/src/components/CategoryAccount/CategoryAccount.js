@@ -11,7 +11,8 @@ function CategoryAccount({
                              expenseId,
                              accounts,
                              incomeExpenseList,
-                             setIncomeExpenseList
+                             setIncomeExpenseList,
+                             currentExpense
                          }) {
 
     const [categoryOutcomePercentage, setCategoryOutcomePercentage] = useState(0);
@@ -20,11 +21,14 @@ function CategoryAccount({
         <div className={cs.CategoryAccount}>
             <Header/>
             <div className={cs.container}>
-                <CategoryOutcomeVisual canSpendSum={canSpendSum} categoryOutcomePercentage={categoryOutcomePercentage}/>
+                <CategoryOutcomeVisual canSpendSum={canSpendSum} categoryOutcomePercentage={categoryOutcomePercentage}
+                                       currentExpense={currentExpense}/>
                 <CategoryOutcomeAdding expenses={expenses} expenseId={null} setExpensesList={setExpensesList}
                                        expensesList={expensesList} accounts={accounts}
                                        incomeExpenseList={incomeExpenseList}
-                                       setIncomeExpenseList={setIncomeExpenseList}/>
+                                       setIncomeExpenseList={setIncomeExpenseList}
+                                       currentExpense={currentExpense}
+                />
             </div>
         </div>
     );

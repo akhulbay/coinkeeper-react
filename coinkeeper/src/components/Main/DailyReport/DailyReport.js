@@ -1,38 +1,40 @@
 import ds from "./DailyReport.module.css"
 
 
-function DailyReport({expensesList, incomeList}) {
+function DailyReport({incomeExpenseList}) {
     return (
         <div className={ds.reportBlock}>
             <span className={ds.reportTitle}>Сегодня, 1 апреля</span>
             <div className={ds.incomeOutcomeList}>
                 {
-                    incomeList.map((item) => (
+                    incomeExpenseList.map((item) => (
+                        item.data.map((i) => (
                             <div className={ds.incomeOutcomeRecord}>
                                 <div className={ds.incomeOutcomeRecordDate}>
-                                    <span>{item.date}</span>
+                                    <span>{i.transactionId}</span>
                                 </div>
                                 <hr/>
                                 <div className={ds.incomeOutcomeRecordContent}>
                                     <div className={ds.incomeAndAccountTitle}>
                                                 <span className={ds.incomeTitle}>{
-                                                    item.income !== null ?
-                                                        item.income.title
+                                                    i.income !== null ?
+                                                        i.income.title
                                                         :
                                                         null
                                                 }</span> <br/>
                                         <span className={ds.accountTitle}>{
-                                            item.account !== null ?
-                                                item.account.title
+                                            i.account !== null ?
+                                                i.account.title
                                                 :
                                                 null
                                         }</span>
                                     </div>
                                     <div className={ds.incomeRecordSum}>
-                                        <span>+ {item.sum} тг</span>
+                                        <span>+ {i.sum} тг</span>
                                     </div>
                                 </div>
                             </div>
+                        ))
                         )
                     )
 

@@ -129,7 +129,6 @@
 }
 
 
-
 .date {
     display: flex;
     justify-content: center;
@@ -189,12 +188,12 @@
     margin-block-end: 0;
 }
 
-.hiddenIncomes > ul >li {
+.hiddenIncomes > ul > li {
     margin-top: 3px;
     list-style-type: none;
 }
 
-.hiddenIncomes > ul >li >svg {
+.hiddenIncomes > ul > li > svg {
     margin-right: 5px;
 }
 
@@ -237,6 +236,7 @@
     background-color: whitesmoke;
     border-radius: 10px;
 }
+
 .addExpensesOptions {
     margin-left: 10px;
     border-radius: 5px;
