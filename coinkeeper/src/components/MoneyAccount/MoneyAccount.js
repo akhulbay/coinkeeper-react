@@ -19,9 +19,27 @@ function MoneyAccount({
   accounts,
   incomeExpenseList,
   setIncomeExpenseList,
+  currentAccount,
+  currentExpense,
 }) {
-  const [outcomePercentage, setOutcomePercentage] = useState(100);
-  const [incomePercentage, setIncomePercentage] = useState(50);
+  const [outcomePercentage, setOutcomePercentage] = useState(
+    (currentAccount.sum / currentAccount.finishSum) * 100
+  );
+  function getPersentage() {
+    let totalSum = expensesList.reduce((sum, e) => e.category.totalSum + sum);
+    let maxSum = expensesList.reduce((sum, e) => e.category.maxSum + sum);
+  }
+  getPersentage();
+  const [incomePercentage, setIncomePercentage] = useState(
+    expensesList.map((expensesList) => {
+      if (expensesList.account.id == currentAccount.id) {
+        console.log(expensesList.category);
+        return (totalSum / maxSum) * 100;
+      } else {
+        return 0;
+      }
+    })
+  );
   const [needToEarnSum, setneedToEarnSum] = useState(
     JSON.parse(localStorage.getItem("needToEarnSum")) || 100_000
   );
@@ -50,6 +68,7 @@ function MoneyAccount({
           setneedToEarnSum={setneedToEarnSum}
           canSpendSum={canSpendSum}
           setCanSpendSum={setCanSpendSum}
+          currentAccount={currentAccount}
         />
         <IncomeOutcomeAdding
           income={income}

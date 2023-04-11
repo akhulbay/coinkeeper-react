@@ -12,6 +12,7 @@ function CategoryAccount({
   accounts,
   incomeExpenseList,
   setIncomeExpenseList,
+  currentExpense,
 }) {
   const [categoryOutcomePercentage, setCategoryOutcomePercentage] = useState(0);
   const [canSpendSum, setCanSpendSum] = useState(
@@ -30,6 +31,7 @@ function CategoryAccount({
           canSpendSum={canSpendSum}
           setCanSpendSum={setCanSpendSum}
           categoryOutcomePercentage={categoryOutcomePercentage}
+          currentExpense={currentExpense}
         />
         <CategoryOutcomeAdding
           expenses={expenses}

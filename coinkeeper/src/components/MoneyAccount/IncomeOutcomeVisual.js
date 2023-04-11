@@ -12,15 +12,16 @@ export const IncomeOutcomeVisual = ({
   setneedToEarnSum,
   canSpendSum,
   setCanSpendSum,
+  currentAccount,
 }) => {
   const [modalActive, setModalActive] = useState(false);
 
   return (
     <div className={ms.incomeOutcomeVisual}>
       <div className={ms.incomeBlock}>
-        <span className={ms.title}>Доходы</span>
+        <span className={ms.title}>Доходы {currentAccount.title}</span>
         <CircleProgressBar percentage={outcomePercentage} />
-        <div className={ms.needToEarn}>{needToEarnSum} тг</div>
+        <div className={ms.needToEarn}>{currentAccount.finishSum} тг</div>
       </div>
       <div className={ms.changeButton}>
         <button onClick={() => setModalActive(!modalActive)}>Изменить</button>
@@ -32,9 +33,9 @@ export const IncomeOutcomeVisual = ({
         setCanSpendSum={setCanSpendSum}
       />
       <div className={ms.outcomeBlock}>
-        <span className={ms.title}>Расходы</span>
+        <span className={ms.title}>Расходы {currentAccount.title}</span>
         <CircleProgressBar percentage={incomePercentage} />
-        <div className={ms.needToEarn}>{canSpendSum} тг</div>
+        <div className={ms.needToEarn}>{currentAccount.sum} тг</div>
       </div>
     </div>
   );

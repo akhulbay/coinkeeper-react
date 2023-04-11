@@ -8,12 +8,13 @@ export const CategoryOutcomeVisual = ({
   canSpendSum,
   setCanSpendSum,
   categoryOutcomePercentage,
+  currentExpense,
 }) => {
   const [modalActive, setModalActive] = useState(false);
   return (
     <div className={cs.incomeOutcomeVisual}>
       <div className={cs.outcomeBlock}>
-        <span className={cs.title}>Расходы</span>
+        <span className={cs.title}>Расходы {currentExpense.title}</span>
         <CircleProgressBar percentage={categoryOutcomePercentage} />
         <div className={cs.needToEarn}>{canSpendSum} тг</div>
       </div>
