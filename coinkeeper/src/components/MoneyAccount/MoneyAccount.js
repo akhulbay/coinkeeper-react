@@ -34,7 +34,9 @@ function MoneyAccount({
     expensesList.map((expensesList) => {
       if (expensesList.account.id == currentAccount.id) {
         console.log(expensesList.category);
-        return (totalSum / maxSum) * 100;
+        return (
+          (expensesList.category.totalSum / expensesList.category.maxSum) * 100
+        );
       } else {
         return 0;
       }
