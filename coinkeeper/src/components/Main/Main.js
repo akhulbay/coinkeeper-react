@@ -44,6 +44,7 @@ function Main({
                     setExpense={setExpenses}
                     setCurrentAccount={setCurrentAccount}
                     setCurrentExpense={setCurrentExpense}
+                    currentExpense={currentExpense}
                 />
                 {/*<CostHistory incomeExpenseList={incomeExpenseList}/>*/}
                 {/*<MoneyAccount income={income}*/}
@@ -57,14 +58,7 @@ function Main({
                 {/*              incomeExpenseList={incomeExpenseList}*/}
                 {/*              setIncomeExpenseList={setIncomeExpenseList}*/}
                 {/*/>*/}
-                {/* <CategoryAccount expensesList={expensesList}
-                                setExpensesList={setExpensesList}
-                                expenses={expenses}
-                                expenseId={null}
-                                accounts={accounts}
-                                incomeExpenseList={incomeExpenseList}
-                                setIncomeExpenseList={setIncomeExpenseList}
-                /> */}
+
             </div>
         </div>
     );

@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Account from "./components/Account/Account";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
+import './App.css'
 import storage from "./components/Icons/component";
 import MoneyAccount from "./components/MoneyAccount/MoneyAccount";
 import CategoryAccount from "./components/CategoryAccount/CategoryAccount";

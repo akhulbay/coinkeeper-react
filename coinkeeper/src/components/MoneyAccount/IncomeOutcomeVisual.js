@@ -20,7 +20,7 @@ export const IncomeOutcomeVisual = ({
     <div className={ms.incomeOutcomeVisual}>
       <div className={ms.incomeBlock}>
         <span className={ms.title}>Доходы {currentAccount.title}</span>
-        <CircleProgressBar percentage={outcomePercentage} />
+        <CircleProgressBar percentage={incomePercentage} />
         <div className={ms.needToEarn}>{currentAccount.finishSum} тг</div>
       </div>
       <div className={ms.changeButton}>
@@ -34,7 +34,7 @@ export const IncomeOutcomeVisual = ({
       />
       <div className={ms.outcomeBlock}>
         <span className={ms.title}>Расходы {currentAccount.title}</span>
-        <CircleProgressBar percentage={incomePercentage} />
+        <CircleProgressBar percentage={outcomePercentage} />
         <div className={ms.needToEarn}>{currentAccount.sum} тг</div>
       </div>
     </div>

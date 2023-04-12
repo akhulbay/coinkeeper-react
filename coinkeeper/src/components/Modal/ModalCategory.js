@@ -6,7 +6,9 @@ const ModalCategory = ({ active, setActive, canSpendSum, setCanSpendSum }) => {
   const [expense, setExpense] = useState("");
 
   const saveSum = () => {
-    setCanSpendSum(expense);
+    if (expense !== null) {
+      setCanSpendSum(expense);
+    }
     setActive(!active);
   };
   //   console.log(income + " " + expense);
@@ -18,7 +20,7 @@ const ModalCategory = ({ active, setActive, canSpendSum, setCanSpendSum }) => {
         <div className="tableInput">
           <div>
             <h4>Расход</h4>
-            <input type="number" onChange={(e) => setExpense(e.target.value)} />
+            <input  type="number" onChange={(e) => setExpense(e.target.value)} />
           </div>
           <button onClick={saveSum}>Save</button>
         </div>

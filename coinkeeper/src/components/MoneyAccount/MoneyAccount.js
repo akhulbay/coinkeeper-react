@@ -32,7 +32,7 @@ function MoneyAccount({
   getPersentage();
   const [incomePercentage, setIncomePercentage] = useState(
     expensesList.map((expensesList) => {
-      if (expensesList.account.id == currentAccount.id) {
+      if (expensesList.account.id === currentAccount.id) {
         console.log(expensesList.category);
         return (
           (expensesList.category.totalSum / expensesList.category.maxSum) * 100
