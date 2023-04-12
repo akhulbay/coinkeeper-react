@@ -1,10 +1,13 @@
 import cs from "./CostHistory.module.css";
 import DailyReport from "../DailyReport/DailyReport";
+import {OutcomeHistory} from "./OutcomeHistory";
+import {IncomeHistory} from "./IncomeHistory";
 
-function CostHistory({incomeExpenseList}) {
+function CostHistory({expensesList, incomeList}) {
     return (
         <div className={cs.CostHistory}>
-            <DailyReport incomeExpenseList={incomeExpenseList}/>
+            <IncomeHistory incomeList={incomeList}></IncomeHistory>
+            <OutcomeHistory expensesList={expensesList} incomeList={incomeList}/>
         </div>
     );
 }
