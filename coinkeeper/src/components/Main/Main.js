@@ -46,7 +46,7 @@ function Main({
                     setCurrentExpense={setCurrentExpense}
                     currentExpense={currentExpense}
                 />
-                <CostHistory expensesList={expensesList} incomeList={incomeList}/>
+                <CostHistory expensesList={expensesList} incomeList={incomeList} expenses={expenses}/>
                 {/*<MoneyAccount income={income}*/}
                 {/*              expenses={expenses}*/}
                 {/*              incomeList={incomeList}*/}
