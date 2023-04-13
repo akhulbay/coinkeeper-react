@@ -10,6 +10,7 @@ import './App.css'
 import storage from "./components/Icons/component";
 import MoneyAccount from "./components/MoneyAccount/MoneyAccount";
 import CategoryAccount from "./components/CategoryAccount/CategoryAccount";
+// import 'bootstrap/dist/css/bootstrap.css'
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);

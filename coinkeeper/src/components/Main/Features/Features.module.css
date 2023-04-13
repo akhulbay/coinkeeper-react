@@ -43,3 +43,48 @@
 .iconStyle{
     padding: 15px;
 }
+
+.transactionBlock {
+    box-shadow: 0px 0px 2px rgb(164, 164, 164);
+    border-radius: 5px;
+    border: 1px solid rgb(234, 234, 234);
+    background-color: white;
+    margin-bottom: 10px;
+}
+.transactionContent {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+.selectFrom > select {
+    outline: none;
+    height: 22px;
+    font-size: 15px;
+}
+
+.selectTo > select {
+    outline: none;
+    height: 22px;
+    font-size: 15px;
+}
+
+.transInputSum >input {
+    outline: none;
+    height: 18px;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.transactionContent > button {
+    cursor: pointer;
+    border: none;
+    background-color: #05d398;
+    border-radius: 3px;
+    color: white;
+    font-size: 15px;
+}
+
+.transactionContent > button:hover {
+    background-color: #048c64;
+}

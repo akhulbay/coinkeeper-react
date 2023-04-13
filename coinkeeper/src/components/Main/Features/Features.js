@@ -1,6 +1,7 @@
 import fm from "./Features.module.css";
 import storage from "../../Icons/component";
 import { Link } from "react-router-dom";
+import {IncomeTransactionWindow} from "./IncomeTransactionWindow";
 
 function Features({
   income,
@@ -14,6 +15,7 @@ function Features({
 }) {
   return (
     <div className={fm.body}>
+      <IncomeTransactionWindow/>
       <div className={fm.income}>
         {income.map((income) => (
           <div className={fm.incomeItem}>
