@@ -11,6 +11,7 @@ export const IncomeHistory = ({
             <div className={cs.OutcomeList}>
                 <span className={cs.outcomeTitle}>All Incomes:</span>
                 {
+                    incomeList ?
                     incomeList.map((item) => (
                             <div className={cs.OutcomeRecord}>
                                 <div className={cs.incomeOutcomeRecordDate}>
@@ -28,12 +29,14 @@ export const IncomeHistory = ({
                                         </span>
                                     </div>
                                     <div className={ms.incomeRecordSum}>
-                                        <span>+ {item.sum} тг</span>
+                                        <span>+ {item.amount} тг</span>
                                     </div>
                                 </div>
                             </div>
                         )
                     )
+                        :
+                        null
 
                 }
             </div>

@@ -66,9 +66,10 @@
     position: absolute;
     background-color: #c2bdbd;
     border-radius: 10px;
-    margin-top: 133px;
+    margin-top: 168px;
     margin-left: 220px;
     width: 80px;
+    height: 100px;
     font-size: 14px;
     font-weight: 500;
 }

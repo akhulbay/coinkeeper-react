@@ -21,7 +21,7 @@ export const IncomeOutcomeVisual = ({
       <div className={ms.incomeBlock}>
         <span className={ms.title}>Доходы {currentAccount.title}</span>
         <CircleProgressBar percentage={incomePercentage} />
-        <div className={ms.needToEarn}>{currentAccount.finishSum} тг</div>
+        <div className={ms.needToEarn}>{currentAccount.initialBalance} тг</div>
       </div>
       <div className={ms.changeButton}>
         <button onClick={() => setModalActive(!modalActive)}>Изменить</button>
@@ -35,7 +35,7 @@ export const IncomeOutcomeVisual = ({
       <div className={ms.outcomeBlock}>
         <span className={ms.title}>Расходы {currentAccount.title}</span>
         <CircleProgressBar percentage={outcomePercentage} />
-        <div className={ms.needToEarn}>{currentAccount.sum} тг</div>
+        <div className={ms.needToEarn}>{currentAccount.initialBalance} тг</div>
       </div>
     </div>
   );

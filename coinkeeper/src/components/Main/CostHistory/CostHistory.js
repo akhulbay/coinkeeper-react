@@ -4,6 +4,7 @@ import {IncomeHistory} from "./IncomeHistory";
 import {ArcElement, Chart as ChartJs, Legend, Title, Tooltip} from 'chart.js';
 import {useEffect, useState} from "react";
 import {Doughnut} from "react-chartjs-2";
+import {getExpenseCurrentBalance} from "../../../data/MainFunctionUtil";
 
 ChartJs.register(
     Tooltip, Title, ArcElement, Legend
@@ -25,7 +26,7 @@ function CostHistory({expensesList, incomeList, expenses}) {
         const fetchData = () =>  {
             for(const i of expenses) {
                 label.push(i.title)
-                data.push(i.totalSum)
+                data.push(getExpenseCurrentBalance(i, expensesList))
             }
                 setData(
                     {

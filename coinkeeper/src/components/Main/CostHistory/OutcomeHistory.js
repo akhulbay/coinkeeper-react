@@ -10,6 +10,7 @@ export const OutcomeHistory = ({
             <div className={cs.OutcomeList}>
                 <span className={cs.outcomeTitle}>All Expenses:</span>
                 {
+                    expensesList ?
                     expensesList.map((item) => (
                             <div className={cs.OutcomeRecord}>
                                 <div className={cs.incomeOutcomeRecordDate}>
@@ -19,8 +20,8 @@ export const OutcomeHistory = ({
                                 <div className={cs.OutcomeRecordContent}>
                                     <div className={cs.incomeAndAccountTitle}>
                                                 <span className={cs.incomeTitle}>{
-                                                    item.category !== null ?
-                                                        item.category.title
+                                                    item.expense !== null ?
+                                                        item.expense.title
                                                         :
                                                         null
                                                 }</span> <br/>
@@ -32,12 +33,14 @@ export const OutcomeHistory = ({
                                                     </span>
                                     </div>
                                     <div className={cs.expenseRecordSum}>
-                                        <span>- {item.sum} тг</span>
+                                        <span>- {item.amount} тг</span>
                                     </div>
                                 </div>
                             </div>
                         )
                     )
+                        :
+                        null
 
                 }
             </div>

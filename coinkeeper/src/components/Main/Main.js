@@ -8,21 +8,13 @@ import CategoryAccount from "../CategoryAccount/CategoryAccount";
 
 function Main({
                   income,
-                  setIncome,
                   accounts,
-                  setAccounts,
                   expenses,
-                  setExpenses,
                   incomeList,
-                  setIncomeList,
                   expensesList,
-                  setExpensesList,
-                  incomeExpenseList,
-                  setIncomeExpenseList,
-                  currentAccount,
                   setCurrentAccount,
-                  currentExpense,
-                  setCurrentExpense
+                  setCurrentExpense,
+                  addIncomeTransaction
               }) {
     let loginIn = JSON.parse(localStorage.getItem("loginIn"));
     if (!loginIn) return <Navigate to="/register"/>;
@@ -32,32 +24,15 @@ function Main({
             <div className={ms.main}>
                 <Features
                     income={income}
-                    setIncome={setIncome}
                     accounts={accounts}
-                    setAccounts={setAccounts}
-                    expensesList={expensesList}
-                    setExpensesList={setExpensesList}
                     expenses={expenses}
-                    expenseId={null}
-                    incomeExpenseList={incomeExpenseList}
-                    setIncomeExpenseList={setIncomeExpenseList}
-                    setExpense={setExpenses}
                     setCurrentAccount={setCurrentAccount}
                     setCurrentExpense={setCurrentExpense}
-                    currentExpense={currentExpense}
+                    addIncomeTransaction={addIncomeTransaction}
+                    incomeList={incomeList}
+                    expensesList={expensesList}
                 />
                 <CostHistory expensesList={expensesList} incomeList={incomeList} expenses={expenses}/>
-                {/*<MoneyAccount income={income}*/}
-                {/*              expenses={expenses}*/}
-                {/*              incomeList={incomeList}*/}
-                {/*              setIncomeList={setIncomeList}*/}
-                {/*              expensesList={expensesList}*/}
-                {/*              setExpensesList={setExpensesList}*/}
-                {/*              accountId={null}*/}
-                {/*              accounts={accounts}*/}
-                {/*              incomeExpenseList={incomeExpenseList}*/}
-                {/*              setIncomeExpenseList={setIncomeExpenseList}*/}
-                {/*/>*/}
 
             </div>
         </div>
