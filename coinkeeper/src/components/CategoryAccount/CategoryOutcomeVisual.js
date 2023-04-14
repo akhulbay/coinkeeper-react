@@ -9,6 +9,7 @@ export const CategoryOutcomeVisual = ({
   setCanSpendSum,
   categoryOutcomePercentage,
   currentExpense,
+  updateCategory,
 }) => {
   const [modalActive, setModalActive] = useState(false);
   return (
@@ -16,7 +17,7 @@ export const CategoryOutcomeVisual = ({
       <div className={cs.outcomeBlock}>
         <span className={cs.title}>Расходы {currentExpense.title}</span>
         <CircleProgressBar percentage={categoryOutcomePercentage} />
-        <div className={cs.needToEarn}>{canSpendSum} тг</div>
+        <div className={cs.needToEarn}>{currentExpense.spendPlan} тг</div>
       </div>
       <div className={cs.changeButton}>
         <button onClick={() => setModalActive(!modalActive)}>Изменить</button>
@@ -26,6 +27,8 @@ export const CategoryOutcomeVisual = ({
         setActive={setModalActive}
         canSpendSum={canSpendSum}
         setCanSpendSum={setCanSpendSum}
+        currentExpense={currentExpense}
+        updateCategory={updateCategory}
       />
     </div>
   );

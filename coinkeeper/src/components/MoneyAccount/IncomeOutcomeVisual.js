@@ -4,6 +4,7 @@ import ms from "./MoneyAccount.module.css";
 import { useState } from "react";
 import CircleProgressBar from "../CircleProgressBar/CircleProgressBar";
 import ModalInput from "../Modal/ModalInput";
+import { getAccountCurrentBalance } from "../../data/MainFunctionUtil";
 
 export const IncomeOutcomeVisual = ({
   incomePercentage,
@@ -13,29 +14,47 @@ export const IncomeOutcomeVisual = ({
   canSpendSum,
   setCanSpendSum,
   currentAccount,
+  userInfo,
+  setUserInfo,
+  updateAccount,
+  incomeList,
+  expensesList,
+  setIncomePercentage,
 }) => {
   const [modalActive, setModalActive] = useState(false);
 
   return (
     <div className={ms.incomeOutcomeVisual}>
       <div className={ms.incomeBlock}>
-        <span className={ms.title}>Доходы {currentAccount.title}</span>
-        <CircleProgressBar percentage={incomePercentage} />
+        <span className={ms.title}>Плановый расход</span>
+        <span className={ms.titleValue}>{currentAccount.title}</span>
         <div className={ms.needToEarn}>{currentAccount.initialBalance} тг</div>
       </div>
       <div className={ms.changeButton}>
-        <button onClick={() => setModalActive(!modalActive)}>Изменить</button>
+        <div className={ms.circleBar}>
+          <CircleProgressBar percentage={outcomePercentage} />
+        </div>
+        <div className={ms.changeButton}>
+          <button onClick={() => setModalActive(!modalActive)}>Изменить</button>
+        </div>
       </div>
       <ModalInput
         active={modalActive}
         setActive={setModalActive}
         setneedToEarnSum={setneedToEarnSum}
         setCanSpendSum={setCanSpendSum}
+        userInfo={userInfo}
+        setUserInfo={setUserInfo}
+        currentAccount={currentAccount}
+        updateAccount={updateAccount}
       />
       <div className={ms.outcomeBlock}>
-        <span className={ms.title}>Расходы {currentAccount.title}</span>
-        <CircleProgressBar percentage={outcomePercentage} />
-        <div className={ms.needToEarn}>{currentAccount.initialBalance} тг</div>
+        <span className={ms.title}> Текущий расход</span>
+        <span className={ms.titleValue}>{currentAccount.title}</span>
+        <div className={ms.needToEarn}>
+          {getAccountCurrentBalance(currentAccount, incomeList, expensesList)}{" "}
+          тг
+        </div>
       </div>
     </div>
   );
