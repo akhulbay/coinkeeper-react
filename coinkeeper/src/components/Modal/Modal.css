@@ -43,6 +43,7 @@ h4 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: -10px;
 }
 
 .inputs {
@@ -71,4 +72,110 @@ h4 {
     border-radius: 5px;
     font-weight: 600;
     font-size: 14px;
+}
+.modal_close {
+    margin-left: 190px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-top: -15px;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+.modal_close_x {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: black;
+    margin-left: 3px;
+    padding: 0px;
+}
+
+
+
+
+.modal_close1 {
+    margin-left: 187px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+.modal_close_x1 {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: black;
+    margin-left: 3px;
+    margin-top: -40px;
+}
+.tableInput1 {
+    width: 220px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+}
+
+.tableInput1 > div > input{
+    width: 150px;
+    border: none;
+    outline: none;
+    height: 20px;
+    font-size: 16px;
+    border-radius: 2px;
+    padding-left: 10px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.tableInput1 > button {
+    color: white;
+    background-color: #fdca01;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.modalCategory {
+    height: 160px;
+    width: 220px;
+    top: 145px;
+    left: 588px;
+    position: fixed;
+    display: flex;
+    transform: scale(0);
+    transition: 0.5s;
+    background-color: #dddddd;
+    border-radius: 10px;
+}
+
+.modalCategory.active {
+    z-index: 1;
+    height: 160px;
+    width: 220px;
+    transform: scale(1);
+}
+
+.modalCategory__content {
+    /*padding: 5px;*/
+    width: 100%;
+    transform: scale(0.5);
+    transition: 0.4s all;
+}
+
+.modalCategory__content.active {
+    transform: scale(1);
 }
