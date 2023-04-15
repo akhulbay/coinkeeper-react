@@ -4,7 +4,7 @@ import ms from "./MoneyAccount.module.css";
 import { useState } from "react";
 import CircleProgressBar from "../CircleProgressBar/CircleProgressBar";
 import ModalInput from "../Modal/ModalInput";
-import { getAccountCurrentBalance } from "../../data/MainFunctionUtil";
+import { getAccountCurrentBalance, getAccountCurrentExpense } from "../../data/MainFunctionUtil";
 
 export const IncomeOutcomeVisual = ({
   incomePercentage,
@@ -52,7 +52,7 @@ export const IncomeOutcomeVisual = ({
         <span className={ms.title}> Текущий расход</span>
         <span className={ms.titleValue}>{currentAccount.title}</span>
         <div className={ms.needToEarn}>
-          {getAccountCurrentBalance(currentAccount, incomeList, expensesList)}{" "}
+          {getAccountCurrentExpense(currentAccount,expensesList)}{" "}
           тг
         </div>
       </div>

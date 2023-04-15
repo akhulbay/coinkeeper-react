@@ -102,6 +102,16 @@ export function getAccountCurrentBalance(
   }
 }
 
+export function getAccountCurrentExpense(account, outcomeTransactionList) {
+    let result = outcomeTransactionList
+        .filter((t) => account.id === t.account.id)
+        .reduce((tSum, t) => {
+            return tSum + parseInt(t.amount);
+        }, 0);
+
+    return isNaN(result) ? 0 : Math.round(result);
+}
+
 export function getExpenseCurrentBalance(expense, outcomeTransactionList) {
   return outcomeTransactionList
     .filter((t) => expense.id === t.expense.id)

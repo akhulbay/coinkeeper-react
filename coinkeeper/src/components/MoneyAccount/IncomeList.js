@@ -11,7 +11,7 @@ function IncomeList({income, setHideHiddenIncomeDiv, setIncomeAccount}) {
         <ul>
             {
                 income.map(item => (
-                    <li className={ms.incomeBlock} key={item.id} onClick={() => handleFunctions(item)}>
+                    <li className={ms.incomeBlockList} key={item.id} onClick={() => handleFunctions(item)}>
 
                         {
                             item.title

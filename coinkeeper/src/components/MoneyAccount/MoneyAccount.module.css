@@ -19,11 +19,11 @@
 }
 
 .incomeBlock {
+    width: 135px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 20px;
     text-align: center;
 }
 
@@ -55,6 +55,7 @@
 }
 
 .outcomeBlock {
+    width: 130px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -212,7 +213,11 @@
     margin-right: 5px;
 }
 
-.incomeBlock > hr {
+.incomeBlockList {
+    text-align: center;
+}
+
+.incomeBlockList > hr {
     margin: 0 10px;
     outline: none;
 }
