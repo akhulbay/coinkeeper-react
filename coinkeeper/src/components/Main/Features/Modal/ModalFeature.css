@@ -1,8 +1,8 @@
 .modalAddIncome {
     height: 200px;
     width: 220px;
-    top: 205px;
-    left: 555px;
+    top: 40%;
+    left: 40%;
     position: fixed;
     display: flex;
     transform: scale(0);
@@ -34,8 +34,8 @@
 .modalAddAccount {
     height: 200px;
     width: 220px;
-    top: 455px;
-    left: 705px;
+    top: 40%;
+    left: 40%;
     position: fixed;
     display: flex;
     transform: scale(0);
@@ -67,8 +67,8 @@
 .modalAddExpense {
     height: 200px;
     width: 300px;
-    top: 455px;
-    left: 705px;
+    top: 40%;
+    left: 40%;
     position: fixed;
     display: flex;
     transform: scale(0);

@@ -3,6 +3,7 @@ import { CategoryOutcomeVisual } from "./CategoryOutcomeVisual";
 import { useEffect, useState } from "react";
 import { CategoryOutcomeAdding } from "./CategoryOutcomeAdding";
 import Header from "../Header/Header";
+import { getExpenseCurrentBalance } from "../../data/MainFunctionUtil";
 
 function CategoryAccount({
   expensesList,
@@ -11,10 +12,23 @@ function CategoryAccount({
   addOutcomeTransaction,
   updateCategory,
 }) {
-  const [categoryOutcomePercentage, setCategoryOutcomePercentage] = useState(0);
+  const [categoryOutcomePercentage, setCategoryOutcomePercentage] =
+    useState(getPercentage);
   const [canSpendSum, setCanSpendSum] = useState(
     JSON.parse(localStorage.getItem("canSpendSum")) || 20_000
   );
+
+  function getPercentage() {
+    let result =
+      (getExpenseCurrentBalance(currentExpense, expensesList) /
+        currentExpense.spendPlan) *
+      100;
+    if (result > 100) {
+      return 100;
+    }
+    return isNaN(result) ? 0 : Math.round(result);
+  }
+  // getExpenseCurrentBalance(expense, expensesList)
 
   useEffect(() => {
     localStorage.setItem("canSpendSum", canSpendSum);
