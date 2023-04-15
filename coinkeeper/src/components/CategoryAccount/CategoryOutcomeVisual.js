@@ -10,6 +10,8 @@ export const CategoryOutcomeVisual = ({
   categoryOutcomePercentage,
   currentExpense,
   updateCategory,
+  getPercentage,
+  setCategoryOutcomePercentage,
 }) => {
   const [modalActive, setModalActive] = useState(false);
   return (
@@ -29,6 +31,8 @@ export const CategoryOutcomeVisual = ({
         setCanSpendSum={setCanSpendSum}
         currentExpense={currentExpense}
         updateCategory={updateCategory}
+        getPercentage={getPercentage}
+        setCategoryOutcomePercentage={setCategoryOutcomePercentage}
       />
     </div>
   );

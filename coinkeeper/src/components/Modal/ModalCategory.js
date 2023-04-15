@@ -9,6 +9,8 @@ const ModalCategory = ({
   setCanSpendSum,
   currentExpense,
   updateCategory,
+  getPercentage,
+  setCategoryOutcomePercentage,
 }) => {
   const [expense, setExpense] = useState("");
 
@@ -17,6 +19,7 @@ const ModalCategory = ({
     newBalance.spendPlan = expense;
     updateCategory(newBalance);
     setActive(!active);
+    setCategoryOutcomePercentage(getPercentage);
   };
   //   console.log(income + " " + expense);
   return (

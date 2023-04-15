@@ -88,6 +88,8 @@ function MoneyAccount({
           updateAccount={updateAccount}
           incomeList={incomeList}
           expensesList={expensesList}
+          getPercentage={getPercentage}
+          setOutcomePercentage={setOutcomePercentage}
         />
         <IncomeOutcomeAdding
           income={income}

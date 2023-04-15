@@ -44,6 +44,8 @@ function CategoryAccount({
           categoryOutcomePercentage={categoryOutcomePercentage}
           currentExpense={currentExpense}
           updateCategory={updateCategory}
+          getPercentage={getPercentage}
+          setCategoryOutcomePercentage={setCategoryOutcomePercentage}
         />
         <CategoryOutcomeAdding
           expensesList={expensesList}

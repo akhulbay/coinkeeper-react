@@ -6,8 +6,8 @@ h4 {
 .modalInput {
     height: 200px;
     width: 220px;
-    top: 145px;
-    left: 715px;
+    top: 30%;
+    left: 41%;
     position: fixed;
     display: flex;
     transform: scale(0);
@@ -152,8 +152,8 @@ h4 {
 .modalCategory {
     height: 160px;
     width: 220px;
-    top: 145px;
-    left: 588px;
+    top: 30%;
+    left: 41%;
     position: fixed;
     display: flex;
     transform: scale(0);

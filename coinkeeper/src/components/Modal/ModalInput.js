@@ -15,6 +15,8 @@ const ModalInput = ({
   updateAccount,
   setIncomePercentage,
   expensesList,
+  getPercentage,
+  setOutcomePercentage,
 }) => {
   const [income, setIncome] = useState("");
   const [expense, setExpense] = useState("");
@@ -24,6 +26,7 @@ const ModalInput = ({
     newBalance.initialBalance = income;
     updateAccount(newBalance);
     setActive(!active);
+    setOutcomePercentage(getPercentage);
   };
   //   console.log(income + " " + expense);
 
