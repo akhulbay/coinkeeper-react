@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# coinkeeper
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+***Budget Manager*** is essential for effective financial planning and management. It helps individuals or organizations to plan, track, and control their spending and income to achieve their financial goals.
 
-## Available Scripts
+The application has incomes (these are sources of earnings), accounts (where money comes from incomes) and types of expenses (where we spend money from accounts).
+____
+## Was used in the project:
++ React
++ Routers
++ Hooks
++ Local Storage
++ React uuid library
++ React Chartjs
++ Bootstrap
++ Styled components
 
-In the project directory, you can run:
+____
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Some screenshots:
+![image](https://user-images.githubusercontent.com/117244670/235206793-1b2e1899-b26b-4855-89cb-1df85be029dd.png)
+![image](https://user-images.githubusercontent.com/117244670/235206835-9d7aeb79-71b1-4598-ad97-51a23af0024d.png)
+**Accounts page** where you can add income or expense
+![image](https://user-images.githubusercontent.com/117244670/235207070-8dc2fdff-f3d9-4649-aabf-90e4cb84964c.png)
+**Expense page** 
+![image](https://user-images.githubusercontent.com/117244670/235207174-a9f0760b-c4a5-41e2-b93b-1d32dd18a003.png)
