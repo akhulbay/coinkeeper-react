@@ -53,7 +53,7 @@ function CostHistory({expensesList, incomeList, expenses}) {
     }, [])
     return (
         <div className={cs.CostHistory}>
-            <IncomeHistory incomeList={incomeList}></IncomeHistory>
+            <IncomeHistory incomeList={incomeList} expensesList={expensesList}/>
             <OutcomeHistory expensesList={expensesList} incomeList={incomeList}/>
             <div className={cs.chartBlock} style={{width:'80%', height:'33%'}}>
                 <Doughnut data={data}/>

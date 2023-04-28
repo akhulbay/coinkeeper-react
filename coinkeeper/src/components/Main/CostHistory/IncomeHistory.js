@@ -3,7 +3,8 @@ import React from "react";
 import ms from "../../MoneyAccount/MoneyAccount.module.css";
 
 export const IncomeHistory = ({
-                                  incomeList
+                                  incomeList,
+                                  expensesList
                               }) => {
 
     return (
@@ -11,7 +12,6 @@ export const IncomeHistory = ({
             <div className={cs.OutcomeList}>
                 <span className={cs.outcomeTitle}>All Incomes:</span>
                 {
-                    incomeList ?
                     incomeList.map((item) => (
                             <div className={cs.OutcomeRecord}>
                                 <div className={cs.incomeOutcomeRecordDate}>
@@ -35,9 +35,6 @@ export const IncomeHistory = ({
                             </div>
                         )
                     )
-                        :
-                        null
-
                 }
             </div>
         </div>
